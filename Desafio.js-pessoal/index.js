@@ -9,6 +9,7 @@ botoes.forEach(botao => {
         if(valor === 'X') valor = '*';
 
         inputSolution.value += valor;
+        
     });
 });
 
