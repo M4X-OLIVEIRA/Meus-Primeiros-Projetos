@@ -1,7 +1,7 @@
 const inputSolution = document.querySelector('.solution');
 const inputResult = document.querySelector('.result');
 const botaoCalculate = document.querySelector('.operators, .container-numbers button')
-
+ 
 botoes.forEach(botao => {
     botao.addEventListener('click', () => {
         let valor = botao.textContent;
@@ -12,6 +12,7 @@ botoes.forEach(botao => {
         
     });
 });
+
 
 botaoCalculate.addEventListener('click', () => {
     try{
