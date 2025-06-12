@@ -37,6 +37,11 @@ h1 {
     text-align: center;
 }
 
+.calculate {
+    padding: 5px 50px;
+    border-radius: 0;
+}
+
 
 .options {
     margin-top: 20px;
