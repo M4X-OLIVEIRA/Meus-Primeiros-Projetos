@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #8A51FC;
+}
+
+.logo {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 20px auto;
+}
+
+main {
+    width: 375px;
+    background: #f4f4f4;
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 44px 24px 23px;
+}
+
+label {
+    color: 777777;
+    font-weight: 400;
+    font-size: 14px;
+}
