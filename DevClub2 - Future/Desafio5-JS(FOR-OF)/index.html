@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura FOR</title>
+</head>
+
+<body>
+    <input placeholder="Digite o nome do contato">
+    <p></p>
+    <button class="search-Button">Procurar Contato</button>
+
+
+</body>
+
+<script>
+    let p = document.querySelector("p")
+    let input = document.querySelector("input")
+
+    const contacts = [
+        { name: "Rodolfo", Number: "(19) 94343-3434" },
+        { name: "Paulo", Number: "(12) 93443-3434" },
+        { name: "Aline", Number: "(13) 94566-3434" },
+        { name: "Maria", Number: "(14) 94343-3476" }
+    ]
+
+    const searchButton = document.querySelector(".search-Button")
+
+    function searchResult() {
+
+        for (const name of contacts) {
+
+            if (input.value.toLocaleLowerCase() == name.name.toLocaleLowerCase()) {
+
+                p.innerHTML = `Contato Encontrado - Nome: ${name.name} Tel: ${name.Number}`
+                break
+
+            } else {
+                p.innerHTML = `Contato não encontrado, tente novamente`
+            }
+
+        }
+
+    }
+
+    searchButton.addEventListener("click", searchResult)
+
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Return</title>
+</head>
+
+<body>
+
+    <input class="first" placeholder="Enter de first number">
+    <select class="choice">
+        <option value="" selected disabled>Choose an operation</option>
+        <option value="more">+</option>
+        <option value="less">-</option>
+        <option value="division">/</option>
+        <option value="multiplication">X</option>
+    </select>
+    <input class="second" placeholder="Enter de second number">
+    <h3>The answer is :</h3>
+    <p></p>
+    <button class="search-Button">Result</button>
+
+</body>
+<script>
+    const numberOne = document.querySelector(".first")
+    const numberTwo = document.querySelector(".second")
+    const choice = document.querySelector(".choice")
+    const result = document.querySelector(".search-Button")
+    const p = document.querySelector("p")
+
+    function calculation() {
+        if (choice.value == "more") {
+            let cal = parseFloat(numberOne.value) + parseFloat(numberTwo.value)
+            return p.innerHTML = cal;
+
+        } if (choice.value == "less") {
+            let cal = parseFloat(numberOne.value) - parseFloat(numberTwo.value)
+            return p.innerHTML = cal;
+
+        } if (choice.value == "division") {
+            let cal = parseFloat(numberOne.value) / parseFloat(numberTwo.value)
+            return p.innerHTML = cal;
+
+        } if (choice.value == "multiplication") {
+            let cal = parseFloat(numberOne.value) * parseFloat(numberTwo.value)
+            return p.innerHTML = cal;
+
+        }
+
+    }
+
+    result.addEventListener("click", calculation)
+
+</script>
+
+</html>

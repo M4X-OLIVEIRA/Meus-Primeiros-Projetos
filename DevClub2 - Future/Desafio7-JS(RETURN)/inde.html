@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount calculator</title>
+</head>
+
+<body>
+
+    <input placeholder="Enter a price">
+    <br><br>
+    <p></p>
+    <br><br>
+    <button class="button">Discount</button>
+</body>
+
+<script>
+    let input = document.querySelector("input")
+    let p = document.querySelector("p")
+    const buttonn = document.querySelector("button")
+
+    const cart = [10, 244, 99, 2, 20, 33, 250]
+
+    function convert() {
+        const value = Number(input.value)
+
+        if (value >= 30) {
+            return p.innerHTML = "Você conseguiu 10% de desconto: " + (value - (value * 0.10))
+
+        } else {
+            return p.innerHTML = "Você não alcançou o valor minimo para ter desconto: " + value
+
+        }
+    }
+
+
+    buttonn.addEventListener("click", convert)
+
+</script>
+
+</html>
